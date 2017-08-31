@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ServiceArea" representedClassName=".ServiceArea" syncable="YES">
+        <attribute name="area_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="area_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_active" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lng" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="provider_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="service_areas" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="ServiceCategory" representedClassName=".ServiceCategory" syncable="YES">
+        <attribute name="created_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_active" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="provider_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="service_cat_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sub_cat_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="service_category" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="account_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="account_no" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bank_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="company_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="company_reg_no" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="device_token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="device_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employee_no" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="expiry_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ifsc_code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_individual" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_verified" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="job_done" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="package_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payment_status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profile_pic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="provider_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reg_no" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unique_agency_number" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="service_areas" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ServiceArea" inverseName="user" inverseEntity="ServiceArea" syncable="YES"/>
+        <relationship name="service_category" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ServiceCategory" inverseName="user" inverseEntity="ServiceCategory" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ServiceArea" positionX="-504" positionY="105" width="128" height="165"/>
+        <element name="ServiceCategory" positionX="-54" positionY="42" width="128" height="133"/>
+        <element name="User" positionX="-315" positionY="-216" width="128" height="448"/>
+    </elements>
+</model>
